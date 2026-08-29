@@ -1,0 +1,26 @@
+# Asset portfolio — from asset_overview_20260805.pdf
+# Market/share = statement price (4 Aug 2026)
+# Intrinsic/share = base-case estimate via prompts/intrinsic.md framework (Aug 2026)
+# ETFs / money-market / NAV funds: intrinsic ≈ NAV ≈ market
+# Equities/REITs: DCF, mid-cycle FCFE, AFFO cap, or excess-return (model estimates — not precision)
+# Format: Asset | Shares | Market/share | Intrinsic/share | Currency
+
+AbbVie (Rg) | 1500 | 243.80 | 135 | USD
+Alphabet-A (Rg) | 2000 | 377.65 | 150 | USD
+Apple (Rg) | 250 | 309.38 | 175 | USD
+Berkshire Hath-B (Rg) | 200 | 517.22 | 555 | USD
+BHP Group Sp ADR (N) | 7600 | 87.45 | 65 | USD
+Horizon Cap Eur Tr Fin S-F1 -A3- | 7436.787 | 100.00 | 100.00 | USD
+Horizon Cap MLO S-F3 -A6- | 4932.426 | 101.30 | 101.30 | USD
+ING Group (Rg) | 15000 | 30.67 | 28 | EUR
+Invesco NASDAQ 100 ETF | 450 | 298.03 | 298.03 | USD
+Iron Mount REIT (Rg) | 5000 | 125.51 | 108 | USD
+Kon Ah Del Br Rg (B) | 19230 | 34.39 | 43 | EUR
+PictCH STMM EUR -I dy- | 730 | 960.19 | 960.19 | EUR
+Public Stor REIT (Rg) | 2000 | 326.49 | 310 | USD
+Realty Inm REIT (Rg) | 14750 | 62.90 | 66 | USD
+Rio Tinto Sp ADR (N) | 12000 | 99.00 | 76 | USD
+Schwab US Dividend Equity ETF | 60000 | 33.85 | 33.85 | USD
+Vanguard 500 Index Fund ETF | 250 | 708.98 | 708.98 | USD
+Verizon Comm (Rg) | 10600 | 46.88 | 58 | USD
+Woodside Enr Sp ADR (N) | 2747 | 22.42 | 21 | USD
