@@ -1,0 +1,32 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // A user's own document ID is their lowercased email address.
+    function callerEmail() {
+      return request.auth != null && request.auth.token.email != null
+        ? request.auth.token.email.lower()
+        : '';
+    }
+
+    // Access is granted by an administrator creating the user document by
+    // hand; there is no self-service registration.
+    function isAllowlisted() {
+      return callerEmail() != '' &&
+        exists(/databases/$(database)/documents/users/$(callerEmail()));
+    }
+
+    match /users/{email} {
+      // A user may read their own record to learn whether they have access.
+      // All writes go through the console or the Admin SDK.
+      allow read: if callerEmail() == email;
+      allow write: if false;
+    }
+
+    // One document per symbol, written only by the migration script, which
+    // uses the Admin SDK and bypasses these rules.
+    match /stock/{symbol} {
+      allow read: if isAllowlisted();
+      allow write: if false;
+    }
+  }
+}

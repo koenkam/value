@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+
+# Service account keys — never commit these.
+keys/
+
+# Flutter / Dart build artefacts
+flutter/build/
+flutter/.dart_tool/
+flutter/.flutter-plugins-dependencies
+
+# Firebase CLI cache
+flutter/.firebase/
