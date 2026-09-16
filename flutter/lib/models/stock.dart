@@ -26,18 +26,18 @@ class Stock {
 
   String get indicesLabel => indices.isEmpty ? missing : indices.join(', ');
 
-  double? get marketCap => _asDouble('market_cap');
-  double? get sharePrice => _asDouble('share_price');
-  double? get dividend => _asDouble('dividend');
-  double? get dividendPct => _asDouble('dividend_pct');
-  double? get eps => _asDouble('eps');
-  double? get revenuePerShare => _asDouble('revenue_per_share');
-  double? get week52High => _asDouble('week_52_high');
-  double? get week52Low => _asDouble('week_52_low');
+  double? get marketCap => numericValue('market_cap');
+  double? get sharePrice => numericValue('share_price');
+  double? get dividend => numericValue('dividend');
+  double? get dividendPct => numericValue('dividend_pct');
+  double? get eps => numericValue('eps');
+  double? get revenuePerShare => numericValue('revenue_per_share');
+  double? get week52High => numericValue('week_52_high');
+  double? get week52Low => numericValue('week_52_low');
 
   /// Numeric fields are stored as Firestore numbers; the updater writes the
   /// string "N/A" when Yahoo has no value for that stock.
-  double? _asDouble(String field) {
+  double? numericValue(String field) {
     final raw = fields[field];
     if (raw == null) return null;
     if (raw is String) {
